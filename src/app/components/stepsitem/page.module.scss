@@ -1,0 +1,32 @@
+@import "../../../app/scss/variables";
+.listItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px; // adjust spacing between items as needed
+}
+
+.svgContainer {
+  flex: 0 0 auto; // prevents SVG from growing
+  margin-right: 10px; // adjust spacing between SVG and description
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    color: $secondary-color;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+// Reverse the layout of every nth child of listContainer
+.listItem:nth-child(odd) {
+  flex-direction: row-reverse;
+}

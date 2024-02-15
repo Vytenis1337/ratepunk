@@ -1,0 +1,20 @@
+@import "../app/scss/variables";
+
+.main {
+  display: flex;
+  max-width: 1366px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: $color-primary;
+  font-family: Noto Sans, sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+}

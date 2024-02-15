@@ -1,0 +1,40 @@
+@import "../../../app/scss/variables";
+
+.navbar_menu_link {
+  text-decoration: none;
+
+  padding: 0 15px;
+  margin: 0 10px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.navbar_menu_link_closed {
+  text-decoration: none;
+
+  padding: 0 15px;
+  margin: 0 10px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.navbar_menu_link:hover,
+.navbar_menu_link_closed:hover {
+  color: $secondary-color;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar_menu_link_closed {
+    display: none;
+  }
+
+  .navbar_menu_link {
+    text-decoration: none;
+
+    padding: 20px;
+    margin: 5px 16px;
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+  }
+}
