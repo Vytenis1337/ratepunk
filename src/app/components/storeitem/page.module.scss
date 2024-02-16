@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  gap: 5px;
+
+  p {
+    font-size: 12px;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}

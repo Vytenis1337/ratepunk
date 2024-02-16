@@ -3,12 +3,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 20px; // adjust spacing between items as needed
+  margin-bottom: 20px;
 }
 
 .svgContainer {
-  flex: 0 0 auto; // prevents SVG from growing
-  margin-right: 10px; // adjust spacing between SVG and description
+  flex: 0 0 auto;
+  margin-right: 10px;
 }
 
 .description {
@@ -26,7 +26,33 @@
   }
 }
 
-// Reverse the layout of every nth child of listContainer
 .listItem:nth-child(odd) {
   flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 450px) {
+  .listItem {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .listItem:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description {
+    display: flex;
+
+    text-align: center;
+  }
+  .svgContainer {
+    order: -1;
+    margin-right: 0;
+  }
 }

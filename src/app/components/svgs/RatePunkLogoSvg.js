@@ -1,6 +1,4 @@
-import React from "react";
-
-const NavbarLogo = () => {
+const RatePunkLogoSvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -151,4 +149,4 @@ const NavbarLogo = () => {
   );
 };
 
-export default NavbarLogo;
+export default RatePunkLogoSvg;

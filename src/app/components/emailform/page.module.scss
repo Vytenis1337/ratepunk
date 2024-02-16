@@ -1,4 +1,10 @@
-.main {
+.container {
+  display: flex;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -28,9 +34,13 @@
     line-height: 25px;
   }
 }
-
-@media only screen and (max-width: 768px) {
-  .main {
+@media only screen and (max-width: 975px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+  .content {
     width: 100%;
   }
 }

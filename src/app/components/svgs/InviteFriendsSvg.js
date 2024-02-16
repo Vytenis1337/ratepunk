@@ -1,6 +1,4 @@
-import React from "react";
-
-const InviteFriends = () => {
+const InviteFriendsSvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -165,4 +163,4 @@ const InviteFriends = () => {
   );
 };
 
-export default InviteFriends;
+export default InviteFriendsSvg;

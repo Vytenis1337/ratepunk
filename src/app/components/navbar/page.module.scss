@@ -72,8 +72,9 @@
   .navbar_links {
     position: absolute;
     flex-direction: column;
-
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
     top: 100%;
     left: 0;
     width: 100%;
@@ -83,6 +84,7 @@
     backdrop-filter: blur(50px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
+    border: 2px solid black;
   }
 
   .navbar_links_closed {

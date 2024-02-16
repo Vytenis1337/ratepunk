@@ -1,27 +1,16 @@
 "use client";
 
-import React from "react";
 import styles from "./page.module.scss";
 import { useState } from "react";
-import CloseIcon from "../svgs/CloseIcon";
-import HamburgerIcon from "../svgs/HamburgerIcon";
-import NavbarLogo from "../svgs/NavbarLogo";
+import CloseIconSvg from "../svgs/CloseIconSvg";
+import HamburgerIconSvg from "../svgs/HamburgerIconSvg";
+import RatePunkLogoSvg from "../svgs/RatePunkLogoSvg";
 import Link from "next/link";
 import { NavbarLinksArray } from "@/app/utils/NavbarLinksArray";
 import NavLinkItem from "../navlinkitem/NavLinkItem";
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
-  // const currentUser = JSON.parse(localStorage?.getItem('currentUser') as string);
-
-  // const handleCloseLogin = () => setOpen(false);
-  // const handleCloseMenu = () => setIsNavExpanded(false);
-
-  //   useOutsideClick(handleCloseLogin, modalRef);
-  //   useOutsideClick(handleCloseMenu, mobileRef);
-
-  //   useEscapeKey(handleCloseLogin);
 
   return (
     <div className={styles.navbar}>
@@ -32,7 +21,7 @@ const Navbar = () => {
             setIsNavExpanded(!isNavExpanded);
           }}
         >
-          <CloseIcon />
+          <CloseIconSvg />
         </button>
       ) : (
         <button
@@ -41,12 +30,12 @@ const Navbar = () => {
             setIsNavExpanded(!isNavExpanded);
           }}
         >
-          <HamburgerIcon />
+          <HamburgerIconSvg />
         </button>
       )}
       <div className={styles.navbar_menu}>
         <Link href="/" className={styles.navbar_logo}>
-          <NavbarLogo />
+          <RatePunkLogoSvg />
         </Link>
 
         <div

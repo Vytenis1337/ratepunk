@@ -1,7 +1,12 @@
-import React from "react";
 import styles from "./page.module.scss";
 
-const StepsItem = ({ svg, desc, title, step }: any) => {
+interface StepsItemProps {
+  svg: JSX.Element;
+  desc: string;
+  title: string;
+  step: string;
+}
+const StepsItem = ({ svg, desc, title, step }: StepsItemProps) => {
   return (
     <div className={styles.listItem}>
       <div className={styles.description}>

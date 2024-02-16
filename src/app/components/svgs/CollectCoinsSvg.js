@@ -1,6 +1,4 @@
-import React from "react";
-
-const CollectCoins = () => {
+const CollectCoinsSvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -138,4 +136,4 @@ const CollectCoins = () => {
   );
 };
 
-export default CollectCoins;
+export default CollectCoinsSvg;

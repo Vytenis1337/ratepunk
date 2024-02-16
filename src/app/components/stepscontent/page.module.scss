@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  width: 100%;
+  margin-left: 30px;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -7,7 +13,13 @@
   gap: 40px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 975px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 40px;
+  }
   .main {
     margin-left: 0;
     gap: 10px;

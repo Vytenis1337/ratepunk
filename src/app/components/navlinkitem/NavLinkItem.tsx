@@ -1,8 +1,17 @@
-import React from "react";
 import styles from "./page.module.scss";
 import Link from "next/link";
 
-const NavLinkItem = ({ name, isNavExpanded, setIsNavExpanded }: any) => {
+interface NavLinkItemProps {
+  name: string;
+  isNavExpanded: boolean;
+  setIsNavExpanded: (isNavExpanded: boolean) => void;
+}
+
+const NavLinkItem = ({
+  name,
+  isNavExpanded,
+  setIsNavExpanded,
+}: NavLinkItemProps) => {
   return (
     <Link
       className={

@@ -1,6 +1,4 @@
-import React from "react";
-
-const GetVoucher = () => {
+const GetVoucherSvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -233,4 +231,4 @@ const GetVoucher = () => {
   );
 };
 
-export default GetVoucher;
+export default GetVoucherSvg;
