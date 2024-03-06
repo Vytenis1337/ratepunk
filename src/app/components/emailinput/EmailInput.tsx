@@ -5,14 +5,16 @@ import { useState, useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import EmailSuccess from "../emailsuccess/EmailSucces";
 import MailIconSvg from "../svgs/MailIconSvg";
+import useFetchEmail from "@/app/hooks/useFetchEmail";
+import useSaveEmail from "@/app/hooks/useSaveEmail";
 
 type FormFields = {
   email: string;
 };
 
 const EmailInput = () => {
-  const [lastEnteredEmail, setLastEnteredEmail] = useState("");
-  const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
+  const emailValue = useFetchEmail(); // Use the custom hook for fetching email
+  const { isEmailConfirmed, saveEmail } = useSaveEmail(); // Use the custom hook for saving email
   const {
     register,
     handleSubmit,
@@ -20,25 +22,9 @@ const EmailInput = () => {
     reset,
   } = useForm<FormFields>();
 
-  useEffect(() => {
-    const savedEmail = localStorage.getItem("lastEnteredEmail");
-    if (savedEmail) {
-      setLastEnteredEmail(savedEmail);
-    }
-  }, []);
-
-  const onSubmit: SubmitHandler<FormFields> = async (data) => {
-    try {
-      console.log("FRONT END EMAIL IS:", data.email);
-
-      localStorage.setItem("lastEnteredEmail", data.email);
-
-      setLastEnteredEmail(data.email);
-      setIsEmailConfirmed(true);
-      reset();
-    } catch (error) {
-      console.error("Error saving email:", error);
-    }
+  const onSubmit: SubmitHandler<FormFields> = (data) => {
+    console.log(data.email);
+    saveEmail(data.email);
   };
   return (
     <>
@@ -68,7 +54,7 @@ const EmailInput = () => {
                 },
               })}
               type="text"
-              placeholder="Enter your email adress "
+              placeholder={emailValue}
             />
           </div>
           <button disabled={isSubmitting} type="submit">

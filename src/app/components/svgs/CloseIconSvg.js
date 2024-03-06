@@ -2,8 +2,8 @@ const CloseIconSvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18.001"
-      height="17.996"
+      width="25"
+      height="20"
       viewBox="0 0 18.001 17.996"
     >
       <g transform="translate(-342 -22.004)">
