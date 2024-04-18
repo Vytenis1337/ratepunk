@@ -15,6 +15,13 @@ export const GET = async (request: NextRequest) => {
   const data = await response.json();
   console.log("DATA IS:", data);
 
+  if (!data.record || !Array.isArray(data.record)) {
+    console.error("data.record is undefined or not an array:", data.record);
+    return new NextResponse("Record not found or invalid format", {
+      status: 404,
+    });
+  }
+
   const email = data.record[0];
   console.log(email);
   return new NextResponse(JSON.stringify(email), { status: 200 });
