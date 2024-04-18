@@ -17,7 +17,6 @@ export const PUT = async (req: NextRequest) => {
   }
 
   try {
-    // Update JSONBin with the last entered email
     const response = await fetch(
       `https://api.jsonbin.io/v3/b/${process.env.NEXT_PUBLIC_BIN_ID}`,
       {

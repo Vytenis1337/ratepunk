@@ -27,9 +27,9 @@ const EmailSuccess = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSuccessMessage(false);
-    }, 5000); // Hide the success message after 3 seconds
+    }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup the timer
+    return () => clearTimeout(timer);
   }, []);
 
   return (

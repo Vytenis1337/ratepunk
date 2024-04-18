@@ -15,7 +15,6 @@ export const GET = async (request: NextRequest) => {
   const data = await response.json();
   console.log("DATA IS:", data);
 
-  // Extract email from the JSON data
   const email = data.record[0];
   console.log(email);
   return new NextResponse(JSON.stringify(email), { status: 200 });

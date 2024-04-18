@@ -13,8 +13,8 @@ type FormFields = {
 };
 
 const EmailInput = () => {
-  const emailValue = useFetchEmail(); // Use the custom hook for fetching email
-  const { isEmailConfirmed, saveEmail } = useSaveEmail(); // Use the custom hook for saving email
+  const emailValue = useFetchEmail();
+  const { isEmailConfirmed, saveEmail } = useSaveEmail();
   const {
     register,
     handleSubmit,
