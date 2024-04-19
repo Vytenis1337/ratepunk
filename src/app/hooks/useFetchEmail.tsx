@@ -4,7 +4,7 @@ const useFetchEmail = () => {
   const [emailValue, setEmailValue] = useState("");
 
   useEffect(() => {
-    fetch("/api/getEmail")
+    fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/getEmail`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch email");

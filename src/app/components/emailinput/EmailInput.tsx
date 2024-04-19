@@ -54,7 +54,7 @@ const EmailInput = () => {
                 },
               })}
               type="text"
-              placeholder={emailValue ?? emailValue}
+              placeholder={emailValue}
             />
           </div>
           <button disabled={isSubmitting} type="submit">
