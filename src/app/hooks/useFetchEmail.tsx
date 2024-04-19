@@ -6,6 +6,7 @@ const useFetchEmail = () => {
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/getEmail`)
       .then((response) => {
+        console.log(response);
         if (!response.ok) {
           throw new Error("Failed to fetch email");
         }
