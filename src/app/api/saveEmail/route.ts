@@ -6,11 +6,8 @@ export const PUT = async (req: NextRequest) => {
   }
 
   const data = await req.json();
-  console.log(data);
 
   const email = data.email;
-
-  console.log("EMAIL IS:", email);
 
   if (!data) {
     return new NextResponse("Data is required", { status: 400 });

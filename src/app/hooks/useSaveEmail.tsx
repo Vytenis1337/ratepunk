@@ -4,7 +4,6 @@ const useSaveEmail = () => {
   const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
 
   const saveEmail = async (email: string) => {
-    console.log(email);
     try {
       const response = await fetch("/api/saveEmail", {
         method: "PUT",

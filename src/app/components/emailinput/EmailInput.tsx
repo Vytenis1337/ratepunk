@@ -23,7 +23,6 @@ const EmailInput = () => {
   } = useForm<FormFields>();
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
-    console.log(data.email);
     saveEmail(data.email);
   };
   return (
